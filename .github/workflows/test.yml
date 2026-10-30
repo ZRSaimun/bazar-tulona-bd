@@ -12,3 +12,6 @@ jobs:
           node-version: '24'
       - run: npm test
       - run: node --check app.js
+      - run: node --check basket-explorer.js
+      - run: node --check quote-compare.js
+      - run: node --check quote-compare-model.js
