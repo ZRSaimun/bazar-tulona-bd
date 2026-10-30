@@ -1,0 +1,2 @@
+export const items=[{id:'rice',name:'Rice — medium grade',unit:'kg',prices:[60,62]},{id:'lentil',name:'Lentils — same demo grade',unit:'kg',prices:[120,115]},{id:'oil',name:'Soybean oil — same demo brand',unit:'litre',prices:[165,168]}];
+export function basketTotal(quantities,market){if(![0,1].includes(market))throw Error('Unknown market');return Math.round(items.reduce((sum,item)=>{const q=Number(quantities[item.id]??0);if(!Number.isFinite(q)||q<0||q>100)throw Error('Use quantities from 0 to 100');return sum+q*item.prices[market];},0)*100)/100;}
