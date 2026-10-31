@@ -1,0 +1,9 @@
+# Basket ledger redesign
+
+Project ID: `REPO-bazar-tulona-bd` (stage-2 idea ID not assigned). Inputs: Research Idea Bank v1, Repository Register v1 and PR #5 at `3b12643727a11c0500446d83f4a8fbbfe21f147f`. This branch is stacked on PR #5 and does not edit stage-4 or stage-5 branches.
+
+The old homepage used a generic hero, controls and repeated result cards. The new homepage uses a basket-first ledger, selected-product comparison table and two-market numeric workspace. The existing quote-comparison and explanation pages are retained. It is visually and structurally distinct from the paperwork wizard, career board and flood bulletin.
+
+User task: enter 0–100 units (0.1 increments) of sample products; read two fictional retail totals and selected-item breakdown; reset to empty. Invalid/blank input hides prior totals and shows an error. Zero quantities never produce a winner. The page reuses the tested `compareBasket` fixture model. No live data, observation date, real savings or government affiliation is claimed. Official DAM report is navigation only. Feedback opens a public GitHub issue draft, not a submission.
+
+Run `npm test`, `node --check app.js` and serve with `python3 -m http.server 8000` (Node 20+). Check 320/390/1280px, 200% zoom, keyboard and focus, Bangla text, print, no-JS, reset and invalid quantities. No runtime dependencies or backend. Budget: homepage HTML+CSS+JS+imported model files below 30 KB uncompressed. Automated checks do not establish WCAG 2.2 AA. Stage 5 must coordinate stacked PR landing order, checked-build PR #4, served-browser checks and release. No hosted preview or user testing is claimed.
